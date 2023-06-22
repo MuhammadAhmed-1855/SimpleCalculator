@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ahmed's Calculator</title>
+  <link rel="icon" href="images/Calculator_Favicon.png">
+  <link rel="stylesheet" href="styles/dark_mode.css" id="Theme">
+</head>
+
+<body>
+  <div class="Wrapper">
+    
+    <div class="Container">
+
+      <div class="Header">
+        <h1 id="Heading">Calculator</h1>
+        <div class="ThemeChanger">
+          <button type="button" onclick="ChangeTheme()" class="ThemeButton">
+            <img src="images/Sun_Icon.png" alt="Theme Icon" height="20" width="20" id="ThemeIcon">
+          </button>
+        </div>
+      </div>
+      
+      <div class="Conclusion">
+        <input id="ConcludedResult" type="text" readonly />
+      </div>
+
+      <div class="FirstRow">
+        <input type="text" name="Result" id="Result" placeholder="Result" readonly />
+        <input type="button" value="C" onclick="Result.value=''" id="ClearButton" />
+      </div>
+      
+      <div class="SecondRow">
+        <input type="button" value="nPr" onclick="LiveScreen('P')" id="Operation" />
+        <input type="button" value="nCr" onclick="LiveScreen('C')" id="Operation" />
+        <input type="button" value="!" onclick="LiveScreen('!')" id="Operation" />
+        <input type="button" value="%" onclick="LiveScreen('%')" id="Operation" />
+      </div>
+      
+      <div class="ThirdRow">
+        <input type="button" value="1" onclick="LiveScreen(1)" />
+        <input type="button" value="2" onclick="LiveScreen(2)" />
+        <input type="button" value="3" onclick="LiveScreen(3)" />
+        <input type="button" value="+" onclick="LiveScreen('+')" id="Operation" />
+      </div>
+      
+      <div class="FourthRow">
+        <input type="button" value="4" onclick=" LiveScreen(4)" />
+        <input type="button" value="5" onclick=" LiveScreen(5)" />
+        <input type="button" value="6" onclick=" LiveScreen(6)" />
+        <input type="button" value="-" onclick="LiveScreen('-')" id="Operation" />
+      </div>
+
+      <div class="FifthRow">
+        <input type="button" value="7" onclick="LiveScreen(7)" />
+        <input type="button" value="8" onclick="LiveScreen(8)" />
+        <input type="button" value="9" onclick=" LiveScreen(9)" />
+        <input type="button" value="&#215;" onclick="LiveScreen('*')" id="Operation" />
+      </div>
+      
+      <div class="SixthRow">
+        <input type="button" value="&#247;" onclick="LiveScreen('/')" id="Operation" />
+        <input type="button" value="0" onclick="LiveScreen(0)" />
+        <input type="button" value="." onclick="LiveScreen('.')" />
+        <input type="button" value="=" onclick="Calculate(Result.value)" id="Operation" />
+      </div>
+      
+    </div>
+
+  </div>
+
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>
